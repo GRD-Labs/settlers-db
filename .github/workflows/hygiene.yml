@@ -1,0 +1,13 @@
+name: Hygiene
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  hygiene:
+    uses: GRD-Labs/.github/.github/workflows/repo-hygiene.yml@main
